@@ -9,4 +9,9 @@ class WebController {
     @RequestMapping("/")
     fun getRoot() = "root"
 
+    @RequestMapping("/proses")
+    fun proses(): String {
+        return "proses"
+    }
+
 }
