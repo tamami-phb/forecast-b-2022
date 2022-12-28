@@ -6,4 +6,7 @@ import org.springframework.stereotype.Repository
 
 @Repository
 interface ResumeRepo: JpaRepository<Resume, String> {
+
+    fun findByTglBetween(tgl1: String, tgl2: String): List<Resume>
+
 }

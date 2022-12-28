@@ -6,7 +6,11 @@
 </head>
 <body>
     <h1>Selamat datang</h1>
-    <form action="/proses" method="post">
+    <form action="/proses" method="post" th:object="${param}">
+        Tanggal awal
+        <input type="date" th:field="*{tglAwal}"><br>
+        Tanggal akhir
+        <input type="date" th:field="*{tglAkhir}"><br>
         <button type="submit">Proses</button>
     </form>
 

@@ -22,4 +22,13 @@ class ResumeRepoTest {
         Assertions.assertEquals(41, result.size)
     }
 
+    @Test
+    fun findByTglBetweenTest() {
+        var result = repo.findByTglBetween("2005-05-27", "2005-06-17")
+        result.forEach {
+            log.info(it.toString())
+        }
+        Assertions.assertNotNull(result)
+    }
+
 }
